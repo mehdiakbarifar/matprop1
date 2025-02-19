@@ -1,0 +1,10 @@
+name = "telegram-bot-worker"
+type = "javascript"
+account_id = "your-account-id"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+name = "telegram-bot-worker"
+route = "https://your-domain.com/*"
