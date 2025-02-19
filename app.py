@@ -14,7 +14,7 @@ model = joblib.load('electrical_conductivity_model.joblib')
 kmeans = joblib.load('kmeans.joblib')
 
 # Telegram Bot setup
-TOKEN = "7877041621:AAGHM8hqQ55oNXKjoYyqm2Wz6VVciNqLm-Y"
+TOKEN = "7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y"
 bot = Bot(token=TOKEN)
 dispatcher = Dispatcher(bot, None, use_context=True)
 
