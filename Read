@@ -7,3 +7,9 @@ data:text/html,<form method="GET" action="https://api.telegram.org/bot7877041621
 
 
 {"ok":true,"result":{"url":"https://matprop1.akbarifar.workers.dev/7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y","has_custom_certificate":false,"pending_update_count":25,"last_error_date":1739968008,"last_error_message":"Wrong response from the webhook: 404 Not Found","max_connections":40,"ip_address":"188.114.97.0"}}
+
+
+data:text/html,<form method="POST" action="http://localhost:5000/7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y"><textarea name="payload" style="width: 100%; height: 200px;">{"update_id":123456789,"message":{"message_id":1,"from":{"id":123456789,"is_bot":false,"first_name":"Test","username":"testuser"},"chat":{"id":123456789,"first_name":"Test","username":"testuser","type":"private"},"date":1739968008,"text":"/start"}}</textarea><input type="submit"></form>
+
+
+data:text/html,<form method="POST" action="http://localhost:5000/7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y"><textarea name="payload" style="width: 100%; height: 200px;">{"update_id":123456789,"message":{"message_id":1,"from":{"id":123456789,"is_bot":false,"first_name":"Test","username":"testuser"},"chat":{"id":123456789,"first_name":"Test","username":"testuser","type":"private"},"date":1739968008,"text":"/start"}}</textarea><input type="submit"></form>
