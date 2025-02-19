@@ -1,1 +1,6 @@
-{"ok":true,"result":{"url":"","has_custom_certificate":false,"pending_update_count":4}}
+data:text/html,<form method="POST" action="https://api.telegram.org/bot7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y/setWebhook"><input type="text" name="url" value="https://matprop1.akbarifar.workers.dev/7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y"><input type="submit"></form>
+
+
+
+
+data:text/html,<form method="GET" action="https://api.telegram.org/bot7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y/getWebhookInfo"><input type="submit"></form>
