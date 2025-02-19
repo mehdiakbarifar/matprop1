@@ -1,1 +1,3 @@
 data:text/html,<form method="POST" action="https://api.telegram.org/bot7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y/setWebhook"><input type="text" name="url" value="https://matprop1.akbarifar.workers.dev/7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y"><input type="submit"></form>
+
+{"ok":true,"result":{"url":"https://matprop1.akbarifar.workers.dev/7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y","has_custom_certificate":false,"pending_update_count":17,"last_error_date":1739967174,"last_error_message":"Wrong response from the webhook: 404 Not Found","max_connections":40,"ip_address":"188.114.97.0"}}
