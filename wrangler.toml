@@ -1,6 +1,6 @@
 name = "telegram-bot-worker"
 type = "javascript"
-account_id = "your-account-id"
+account_id = "akbarifar@gmail.com"
 workers_dev = true
 route = ""
 zone_id = ""
