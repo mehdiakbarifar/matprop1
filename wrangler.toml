@@ -1,4 +1,4 @@
-name = "telegram-bot-worker"
+name = "matprop1"
 account_id = "akbarifar@gmail.com"
 main = "telegram_worker.js"
 workers_dev = true
