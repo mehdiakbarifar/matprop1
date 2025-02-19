@@ -4,8 +4,13 @@ import joblib
 import pandas as pd
 from telegram import Bot, Update
 from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters
+import logging
 
 app = Flask(__name__)
+
+# Enable logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Load the models
 scaler = joblib.load('scaler.joblib')
@@ -74,6 +79,7 @@ def handle_message(update, context):
             update.message.reply_text(f"{feature}: {value}")
 
     except Exception as e:
+        logger.error(f"Error processing input data: {e}")
         update.message.reply_text("There was an error processing your input. Please make sure the data is in the correct format.")
 
 # Add handlers
@@ -87,7 +93,7 @@ def webhook():
         update = Update.de_json(request.get_json(force=True), bot)
         dispatcher.process_update(update)
     except Exception as e:
-        print(f"Error: {e}")
+        logger.error(f"Error in webhook: {e}")
         return "Internal Server Error", 500
     return "ok"
 
