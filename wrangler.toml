@@ -2,6 +2,7 @@ name = "matprop1"
 account_id = "1bec1e4c3f789619075750f9973229e5"
 main = "telegram_worker.js"
 workers_dev = true
+compatibility_date = "2025-02-19"
 
 [env.production]
 name = "telegram-bot-worker"
