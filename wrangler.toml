@@ -1,8 +1,8 @@
 name = "telegram-bot-worker"
-type = "javascript"
 account_id = "akbarifar@gmail.com"
+main = "telegram_worker.js"
 workers_dev = true
 
 [env.production]
 name = "telegram-bot-worker"
-route = "https://your-domain.com/*"
+
