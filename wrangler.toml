@@ -7,3 +7,9 @@ compatibility_date = "2025-02-19"
 [env.production]
 name = "telegram-bot-worker"
 
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+
+
