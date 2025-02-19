@@ -25,6 +25,7 @@ dispatcher = Dispatcher(bot, None, use_context=True)
 
 # Define a command handler to start the bot
 def start(update, context):
+    logger.info("Received /start command")
     update.message.reply_text(
         "Please enter the following properties of the material, separated by commas:\n"
         "Density, H Cond, Sp Heat, Atm Mass, MFP Phonon, Atm R, Electrons"
@@ -33,6 +34,7 @@ def start(update, context):
 # Define a message handler to process the input data
 def handle_message(update, context):
     try:
+        logger.info("Received message: %s", update.message.text)
         input_text = update.message.text.split(',')
         input_data = {key: float(value) for key, value in zip(
             ['Density', 'H Cond', 'Sp Heat', 'Atm Mass', 'MFP Phonon', 'Atm R', 'Electrons'], input_text)}
@@ -91,6 +93,7 @@ dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_me
 def webhook():
     try:
         update = Update.de_json(request.get_json(force=True), bot)
+        logger.info("Received webhook update")
         dispatcher.process_update(update)
     except Exception as e:
         logger.error(f"Error in webhook: {e}")
