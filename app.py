@@ -20,8 +20,10 @@ dispatcher = Dispatcher(bot, None, use_context=True)
 
 # Define a command handler to start the bot
 def start(update, context):
-    update.message.reply_text("Please enter the following properties of the material:\n"
-                              "Density, H Cond, Sp Heat, Atm Mass, MFP Phonon, Atm R, Electrons")
+    update.message.reply_text(
+        "Please enter the following properties of the material, separated by commas:\n"
+        "Density, H Cond, Sp Heat, Atm Mass, MFP Phonon, Atm R, Electrons"
+    )
 
 # Define a message handler to process the input data
 def handle_message(update, context):
@@ -81,8 +83,12 @@ dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_me
 # Route to handle Telegram webhook
 @app.route(f'/{TOKEN}', methods=['POST'])
 def webhook():
-    update = Update.de_json(request.get_json(force=True), bot)
-    dispatcher.process_update(update)
+    try:
+        update = Update.de_json(request.get_json(force=True), bot)
+        dispatcher.process_update(update)
+    except Exception as e:
+        print(f"Error: {e}")
+        return "Internal Server Error", 500
     return "ok"
 
 if __name__ == '__main__':
