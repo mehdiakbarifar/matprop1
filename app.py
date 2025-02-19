@@ -88,17 +88,18 @@ def handle_message(update, context):
 dispatcher.add_handler(CommandHandler("start", start))
 dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
 
-# Route to handle Telegram webhook
 @app.route(f'/{TOKEN}', methods=['POST'])
 def webhook():
     try:
+        logger.info("Received webhook request: %s", request.get_json(force=True))
         update = Update.de_json(request.get_json(force=True), bot)
-        logger.info("Received webhook update")
+        logger.info("Update object created: %s", update)
         dispatcher.process_update(update)
     except Exception as e:
         logger.error(f"Error in webhook: {e}")
         return "Internal Server Error", 500
     return "ok"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
