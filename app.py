@@ -5,6 +5,8 @@ import pandas as pd
 from telegram import Bot, Update
 from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters
 import logging
+import os
+
 
 app = Flask(__name__)
 
@@ -19,7 +21,7 @@ model = joblib.load('electrical_conductivity_model.joblib')
 kmeans = joblib.load('kmeans.joblib')
 
 # Telegram Bot setup
-TOKEN = "7877041621:AAGHM8hqQ55oNXkjoYyqm2Wz6VVciNqLm-Y"
+TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 bot = Bot(token=TOKEN)
 dispatcher = Dispatcher(bot, None, use_context=True)
 
