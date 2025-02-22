@@ -1,0 +1,2 @@
+This repository containes pythone code and joblib files in order to predict the electrical conductivity of an unkown elemnent according to known properties such as specific heat, heat conductivity, density, mean free path of phonon etc. The model is trained by Random Forest regression method from properties of 39 metallic elements. 
+Using the server on Pythoneverywhere.com, the bot was deployed on Telegram app and testes successfully. 
